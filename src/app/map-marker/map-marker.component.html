@@ -1,0 +1,19 @@
+<div dir="rtl" class="map-container">
+  <div id="map"></div>
+  <div class="info-box" *ngIf="cars.length">
+    <div *ngFor="let car of cars; trackBy: trackByCarId" class="car-box">
+      <h3 style="font-weight: bold; margin-bottom: 15px">{{ car.name }}</h3>
+
+      <div class="my-flex-container">
+        <p><b>پلاک : </b></p>
+        <div class="plate d-flex">
+          <div class="iran text-center me-1">IR<br />ایران</div>
+          <div class="numbers">{{ car.plate }}</div>
+        </div>
+      </div>
+
+      <p><b>توضیحات : </b> {{ car.description }}</p>
+      <hr />
+    </div>
+  </div>
+</div>
